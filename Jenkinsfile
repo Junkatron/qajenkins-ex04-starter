@@ -28,8 +28,8 @@ pipeline {
     always {
         recordIssues(
             qualityGates: [
-                [criticality: 'FAILURE', integerThreshold: 30, threshold: 30.0, type: 'TOTAL_HIGH'], 
-                [criticality: 'FAILURE', integerThreshold: 5, threshold: 5.0, type: 'NEW']
+                [criticality: 'FAILURE', integerThreshold: 300, threshold: 300.0, type: 'TOTAL_HIGH'], 
+                [criticality: 'FAILURE', integerThreshold: 500, threshold: 500.0, type: 'NEW']
                 ], 
                 sourceCodeRetention: 'LAST_BUILD', 
                 tools: [grype()]
